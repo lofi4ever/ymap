@@ -42,10 +42,7 @@ export default {
           throw err;
       }, this);
     }
-  },
-  // async mounted() {
-
-  // }
+  }
 }
 </script>
 
