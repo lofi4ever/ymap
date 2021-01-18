@@ -15,7 +15,6 @@
 </template>
 
 <script>
-import { loadYmap } from 'vue-yandex-maps';
 
 export default {
   name: 'Map',
@@ -37,7 +36,6 @@ export default {
       ymaps.route(['Южное Бутово', 'Москва, метро Парк Культуры'], {
           multiRoute: true
       }).done(function (route) {
-          //route.options.set("mapStateAutoApply", true);
           this.mapInstance.geoObjects.add(route);
           this.mapInstance.setBounds(this.mapInstance.geoObjects.getBounds(), {checkZoomRange: true, zoomMargin:42});
       }, function (err) {
